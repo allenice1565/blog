@@ -1,0 +1,1 @@
+System.register(["./index-legacy.de8e8c18.js"],(function(e,t){"use strict";var n;return{setters:[function(e){n=e.n}],execute:function(){e("default",n({name:"ActivityIndex"},(function(){return(0,this._self._c)("router-view")}),[],!1,null,null,null,null).exports)}}}));

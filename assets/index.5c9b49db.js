@@ -1,0 +1,1 @@
+import{n as r}from"./index.25385ea3.js";const s={name:"NewsIndex"};var t=function(){var n=this,e=n._self._c;return e("router-view")},_=[],o=r(s,t,_,!1,null,null,null,null);const c=o.exports;export{c as default};
