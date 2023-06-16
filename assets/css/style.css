@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  min-width: none;
+  min-width: 2000px;
   height: 100%;
   background-color: #f3f5f7;
 }

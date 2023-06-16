@@ -229,3 +229,18 @@ $('#mynetwork').append(`
 $('.relationshipTable-title').append(`
       <div class="export"><img src="./assets/images/export.png" />Export</div>
 `)
+
+function isMobile() {
+  let flag =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+      )
+  return flag
+}
+
+if(isMobile()){
+  const width = document.documentElement.clientWidth || document.body.clientWidth
+        $('body').css({'width':'2500px'})
+        $('body').css({'transform-origin':'0 0'})
+        $('body').css({'transform':`scale(${width / 2500})`})
+}
