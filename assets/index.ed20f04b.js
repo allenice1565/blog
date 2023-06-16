@@ -1,1 +1,0 @@
-import{n as r}from"./index.ad5d9040.js";const t={name:"ActivityIndex"};var _=function(){var n=this,e=n._self._c;return e("router-view")},o=[],s=r(t,_,o,!1,null,null,null,null);const c=s.exports;export{c as default};

@@ -1,1 +1,77 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><link rel="icon" href="/favicon.ico"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vite App</title><script type="module" crossorigin src="/assets/index.1736e7ae.js"></script><link rel="stylesheet" href="/assets/index.947c46dc.css"><script type="module">try{import.meta.url;import("_").catch(()=>1);}catch(e){}window.__vite_is_modern_browser=true;</script><script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy build because dynamic import or import.meta.url is unsupported, syntax error above should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script></head><body><div id="app"></div><script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script><script nomodule crossorigin id="vite-legacy-polyfill" src="/assets/polyfills-legacy.b77439a0.js"></script><script nomodule crossorigin id="vite-legacy-entry" data-src="/assets/index-legacy.e5d74a46.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TCMKS</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/vis-network.min.css" />
+    <link href="//unpkg.com/layui@2.8.7/dist/css/layui.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="headContainer">
+        <div class="headContainer-main">
+          <div class="logo">
+            <img src="./assets/images/logo.png" alt="logo" /><span>TCMKS</span>
+          </div>
+          <div class="menu">
+            <a href="#" data-index="1" class="active-tab">Home</a>
+            <a href="#" data-index="2">Entity Search</a>
+            <a href="#" data-index="3" class="subMenu">Relationship Search</a>
+            <a href="#" data-index="4">Help</a>
+            <a href="#" data-index="5">Contact</a>
+          </div>
+          <div class="return">Return to the home page</div>
+          <img id="bgLeft" src="./assets/images/bg-left.png" alt="">
+          <img id="bgRight" src="./assets/images/bg-right.png" alt="">
+        </div>
+      </div>
+      <div class="bodyContainer">
+        <div class="bodyContainer-left">
+          <div
+            data-index="1"
+            class="bodyContainer-leftItem bodyContainer-leftItem__active"
+          >
+            Home
+          </div>
+          <div data-index="2" class="bodyContainer-leftItem">Entity Search</div>
+          <div data-index="3" class="bodyContainer-leftItem">
+            Relationship Search
+          </div>
+          <div data-index="4" class="bodyContainer-leftItem">Help</div>
+          <div data-index="5" class="bodyContainer-leftItem">Contact</div>
+          <div class="bodyContainer-left-collapseBtn">&lt;&lt;</div>
+        </div>
+        <div class="bodyContainer-main">
+          <div id="mynetwork"></div>
+          <div class="relationshipTable">
+            <div class="relationshipTable-title">Relationship Table</div>
+            <div class="relationshipTable-table"></div>
+            <div class="relationshipTable-footer">
+              <span
+                >Showing 1 to 20 of <span id="totalRow"></span> rows
+                <select class="dropdown-menu" style="display: inline-block">
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="30">30</option>
+                </select>
+                rows per page</span
+              >
+              <div class="pagination"></div>
+            </div>
+          </div>
+        </div>
+        <div class="bodyContainer-right">
+          <div class="bodyContainer-right-title">Control Panel</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./assets/js/vis.min.js"></script>
+  <script src="//unpkg.com/layui@2.8.7/dist/layui.js"></script>
+  <script src="./assets/js/vis-network.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+  <script src="./assets/js/index.js"></script>
+</html>
