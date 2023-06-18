@@ -1,6 +1,5 @@
 .container {
   width: 100%;
-  min-width: 2000px;
   height: 100%;
   background-color: #f3f5f7;
 }
@@ -110,14 +109,16 @@ body {
   width: 100%;
   margin: -133px auto 0;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .bodyContainer-left {
-  position: absolute;
+  position: fixed;
   width: 226px;
   height: 336px;
   background-color: #fff;
-  top: 208px;
+  top: 264px;
   left: 0;
   display: flex;
   flex-direction: column;
@@ -187,19 +188,19 @@ body {
 }
 
 .bodyContainer-main {
-  width: 1200px;
+  width: 1100px;
   background-color: #fff;
   box-sizing: border-box;
-}
-
-.bodyContainer-main {
-  margin: 0 auto;
-  background-color: #fff;
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: calc(40%); */
+  /* transform: translateX(-50%); */
+  margin-right: 10px;
   padding: 27px;
 }
 
 #mynetwork {
-  width: 1148px;
+  width: 100%;
   height: 502px;
   border: 1px solid #a0a0a0;
 }
@@ -326,13 +327,11 @@ body {
   width: 322px;
   height: 828px;
   background: #f7f8fa;
-  position: absolute;
-  top: 0;
-  left: calc(50% + 610px);
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: calc(50% + 610px); */
   padding: 20px;
   box-sizing: border-box;
-  /* overflow-x: hidden; */
-  /* overflow-y: auto; */
 }
 
 .vis-configuration-wrapper {
