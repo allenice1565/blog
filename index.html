@@ -1,77 +1,1237 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-hk">
   <head>
+    <!-- Required Meta Tags -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-    <title>TCMKS</title>
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/vis-network.min.css" />
-    <link rel="stylesheet" href="./assets/css/layui.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/css/plugins.css" />
+    <!-- Icon Plugins CSS -->
+    <link rel="stylesheet" href="assets/css/iconplugins.css" />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <!-- Theme Dark CSS -->
+    <link rel="stylesheet" href="assets/css/theme-dark.css" />
+    <link rel="stylesheet" href="assets/css/responsive-big.css" />
+
+    <!-- Title -->
+    <title>我們的服務-服務詳情</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
   </head>
-  <body>
-    <div class="container">
-      <div class="headContainer">
-        <div class="headContainer-main">
-          <div class="logo">
-            <img src="./assets/images/logo.png" alt="logo" /><span>TCMKS</span>
-          </div>
-          <div class="menu">
-            <a href="#" data-index="1" class="active-tab">Home</a>
-            <a href="#" data-index="2">Entity Search</a>
-            <a href="#" data-index="3" class="subMenu">Relationship Search</a>
-            <a href="#" data-index="4">Help</a>
-            <a href="#" data-index="5">Contact</a>
-          </div>
-          <div class="return">Return to the home page</div>
-          <img id="bgLeft" src="./assets/images/bg-left.png" alt="">
-          <img id="bgRight" src="./assets/images/bg-right.png" alt="">
-        </div>
+  <body class="inner-page header-white">
+    <!-- Pre Loader -->
+    <div id="preloader">
+      <div id="preloader-area">
+        <div class="spinner"></div>
+        <div class="spinner"></div>
+        <div class="spinner"></div>
       </div>
-      <div class="bodyContainer">
-        <div class="bodyContainer-left">
-          <div
-            data-index="1"
-            class="bodyContainer-leftItem bodyContainer-leftItem__active"
-          >
-            Home
+      <div class="preloader-section preloader-left"></div>
+      <div class="preloader-section preloader-right"></div>
+    </div>
+    <!-- End Pre Loader -->
+
+    <header class="header">
+      <!-- Top Header -->
+      <div class="top-hd">
+        <div class="hdK flexC fl-bet">
+          <div class="header-l">
+            <ul class="flexC">
+              <li>
+                <a href="javascript:;"
+                  ><span class="iconfont icon-facebook"></span
+                ></a>
+              </li>
+              <li>
+                <a href="javascript:;"
+                  ><span class="iconfont icon-instagram"></span
+                ></a>
+              </li>
+              <li>
+                <a href="javascript:;"
+                  ><span class="iconfont icon-dianhua"></span
+                ></a>
+              </li>
+              <li>
+                <a href="javascript:;"
+                  ><span class="iconfont icon-mail"></span
+                ></a>
+              </li>
+            </ul>
           </div>
-          <div data-index="2" class="bodyContainer-leftItem">Entity Search</div>
-          <div data-index="3" class="bodyContainer-leftItem">
-            Relationship Search
-          </div>
-          <div data-index="4" class="bodyContainer-leftItem">Help</div>
-          <div data-index="5" class="bodyContainer-leftItem">Contact</div>
-          <div class="bodyContainer-left-collapseBtn">&lt;&lt;</div>
-        </div>
-        <div class="bodyContainer-main">
-          <div id="mynetwork"></div>
-          <div class="relationshipTable">
-            <div class="relationshipTable-title">Relationship Table</div>
-            <div class="relationshipTable-table"></div>
-            <div class="relationshipTable-footer">
-              <span
-                >Showing 1 to 20 of <span id="totalRow"></span> rows
-                <select class="dropdown-menu" style="display: inline-block">
-                  <option value="10">10</option>
-                  <option value="20">20</option>
-                  <option value="30">30</option>
-                </select>
-                rows per page</span
-              >
-              <div class="pagination"></div>
+          <div class="header-r">
+            <div class="others-options d-flex align-items-center">
+              <div class="optional-item">
+                <div class="search-btn NavENk">
+                  <a href="javascript:;" class="menu-icon hdENa">
+                    繁体中文 <span class="iconfont icon-xiala"></span>
+                  </a>
+                  <div class="NavEN Huans">
+                    <a href="?lang=tc" class="NavENa flexC Huans">English</a>
+                    <a href="?lang=en" class="NavENa flexC Huans">繁体中文</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="optional-item">
+                <div class="search-btn">
+                  <a
+                    class="#"
+                    href="#searchmodal"
+                    data-bs-toggle="modal"
+                    data-bs-target="#searchmodal"
+                  >
+                    <i class="iconfont icon-sousuo"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="optional-item">
+                <div class="user-btn">
+                  <a href="my-account.html">
+                    <i class="iconfont icon-yonghu"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="optional-item">
+                <a class="optional-item-cart" href="cart.html">
+                  <i class="iconfont icon-24gf-bagFull"></i>
+                  <!--<span>2</span>-->
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="bodyContainer-right">
-          <div class="bodyContainer-right-title">Control Panel</div>
+      </div>
+      <!-- Top Header End -->
+
+      <!-- Start Navbar Area -->
+      <div class="nav-div-block">
+        <div class="hdK flexC fl-bet">
+          <h1 class="logo">
+            <a href="javascript:;"
+              ><img src="assets/images/icon/logo.png" alt="logo"
+            /></a>
+          </h1>
+          <nav class="nav">
+            <div class="bottomLine"></div>
+            <ul class="nav-ul flexC">
+              <li class="nav-li">
+                <a href="javascript:;" class="nav-menu flexC">主頁</a>
+              </li>
+              <li class="nav-li">
+                <a href="javascript:;" class="nav-menu flexC">有關我們</a>
+              </li>
+              <li class="nav-li">
+                <a href="javascript:;" class="nav-menu flexC">所有產品</a>
+              </li>
+              <li class="nav-li nav-item">
+                <a href="javascript:;" class="nav-menu flexC"
+                  >我們的服務<i></i
+                ></a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a href="testimonials.html" class="nav-link">
+                      我們的服務
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="testimonials.html" class="nav-link">
+                      我們的服務
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="testimonials.html" class="nav-link">
+                      我們的服務
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="testimonials.html" class="nav-link">
+                      我們的服務
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle">
+                      我們的服務
+                      <i class="bx bx-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a href="team.html" class="nav-link"> 我們的服務 </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="team-details.html" class="nav-link">
+                          我們的服務
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="team.html" class="nav-link"> 我們的服務 </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="team-details.html" class="nav-link">
+                          我們的服務
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-li nav-item">
+                <a href="javascript:;" class="nav-menu flexC"
+                  >課程和工作坊<i></i
+                ></a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a href="testimonials.html" class="nav-link">
+                      我們的服務
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="testimonials.html" class="nav-link">
+                      我們的服務
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="testimonials.html" class="nav-link">
+                      我們的服務
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="testimonials.html" class="nav-link">
+                      我們的服務
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle">
+                      我們的服務
+                      <i class="bx bx-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a href="team.html" class="nav-link"> 我們的服務 </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="team-details.html" class="nav-link">
+                          我們的服務
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="team.html" class="nav-link"> 我們的服務 </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="team-details.html" class="nav-link">
+                          我們的服務
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-li">
+                <a href="javascript:;" class="nav-menu flexC">網誌</a>
+              </li>
+              <li class="nav-li">
+                <a href="javascript:;" class="nav-menu flexC">聯絡我們</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!--wap-menu-->
+          <div class="wap-header-r">
+            <div class="others-options d-flex align-items-center">
+              <div class="optional-item">
+                <div class="search-btn NavENk">
+                  <a href="javascript:;" class="menu-icon hdENa">
+                    繁体中文 <span class="iconfont icon-xiala"></span>
+                  </a>
+                  <div class="NavEN Huans">
+                    <a href="?lang=tc" class="NavENa flexC Huans">English</a>
+                    <a href="?lang=en" class="NavENa flexC Huans">繁体中文</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="optional-item">
+                <div class="search-btn">
+                  <a
+                    class="#"
+                    href="#searchmodal"
+                    data-bs-toggle="modal"
+                    data-bs-target="#searchmodal"
+                  >
+                    <i class="iconfont icon-sousuo"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="optional-item">
+                <div class="user-btn">
+                  <a href="my-account.html">
+                    <i class="iconfont icon-yonghu"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="optional-item">
+                <a class="optional-item-cart" href="cart.html">
+                  <i class="iconfont icon-24gf-bagFull"></i>
+                  <!--<span>2</span>-->
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--wap-menu-->
+
+          <!--wap-menu-->
+          <div class="nav-button-wrapper">
+            <a
+              class="nav-button nav-button-button"
+              href="javascript:void(0);"
+              id="nav-btn"
+            >
+              <div class="menu-btn show">
+                <span></span>
+              </div>
+            </a>
+          </div>
+          <!--wap-menu-->
+          <nav class="wap-nav">
+            <ul class="wap-nav-ul">
+              <li class="nav-li">
+                <a href="javascript:;" class="nav-menu flexC">主頁</a>
+              </li>
+              <li class="nav-li">
+                <a href="javascript:;" class="nav-menu flexC">有關我們</a>
+              </li>
+              <li class="nav-li">
+                <a href="javascript:;" class="nav-menu flexC fl-bet"
+                  >所有產品<i>+</i></a
+                >
+                <dl class="wap-sub-nav">
+                  <dt>
+                    <div class="sub-tit flexC fl-cen">
+                      商品分類
+                      <a href="javascript:;" class="sub-nav-closed flexC fl-cen"
+                        ><span class="iconfont icon-guanbi"></span
+                      ></a>
+                    </div>
+                  </dt>
+                  <dd>
+                    <a href="javascript:;" class="sub-nav-a flexC fl-bet"
+                      >命理諮詢<span class="iconfont icon-youjiantou1"></span
+                    ></a>
+
+                    <dl class="wap-sub-nav">
+                      <dt>
+                        <div class="sub-tit flexC fl-cen">
+                          命理諮詢
+                          <a
+                            href="javascript:;"
+                            class="sub-nav-closed flexC fl-cen"
+                            ><span class="iconfont icon-guanbi"></span
+                          ></a>
+                        </div>
+                      </dt>
+                      <dd>
+                        <a href="javascript:;" class="sub-nav-a flexC"
+                          >西方命理</a
+                        >
+                      </dd>
+                      <dd>
+                        <a href="javascript:;" class="sub-nav-a flexC"
+                          >西方命理</a
+                        >
+                      </dd>
+                      <dd>
+                        <a href="javascript:;" class="sub-nav-a flexC"
+                          >儀式祈福</a
+                        >
+                      </dd>
+                      <dd>
+                        <a href="javascript:;" class="sub-nav-a flexC"
+                          >情緒療癒與靈魂解讀</a
+                        >
+                      </dd>
+                    </dl>
+                  </dd>
+                  <dd>
+                    <a href="javascript:;" class="sub-nav-a flexC fl-bet"
+                      >家居生活<span class="iconfont icon-youjiantou1"></span
+                    ></a>
+                  </dd>
+                  <dd>
+                    <a href="javascript:;" class="sub-nav-a flexC fl-bet"
+                      >魔法開運品<span class="iconfont icon-youjiantou1"></span
+                    ></a>
+                  </dd>
+                  <dd>
+                    <a href="javascript:;" class="sub-nav-a flexC fl-bet"
+                      >全分類<span class="iconfont icon-youjiantou1"></span
+                    ></a>
+                  </dd>
+                </dl>
+              </li>
+              <li class="nav-li">
+                <a href="javascript:;" class="nav-menu flexC fl-bet"
+                  >我們的服務<i>+</i></a
+                >
+              </li>
+              <li class="nav-li">
+                <a href="javascript:;" class="nav-menu flexC fl-bet"
+                  >課程和工作坊<i>+</i></a
+                >
+              </li>
+              <li class="nav-li">
+                <a href="javascript:;" class="nav-menu flexC">網誌</a>
+              </li>
+              <li class="nav-li">
+                <a href="javascript:;" class="nav-menu flexC">聯絡我們</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- End Navbar Area -->
+    </header>
+
+    <!-- Modal Start -->
+    <div
+      class="modal fade fade-scale searchmodal"
+      id="searchmodal"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-bs-dismiss="modal">
+              <i class="ri-close-line"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="modal-search-form" action="search.html">
+              <input
+                type="search"
+                class="search-field"
+                placeholder="Search..."
+              />
+              <button type="submit"><i class="ri-search-line"></i></button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
+    <!-- Modal End -->
+
+    <section class="content">
+      <!-- Inner Banner Area -->
+      <div
+        class="inner-banner"
+        style="background-image: url(./assets/images/pic/innerBan.jpg)"
+      >
+        <div class="hdK">
+          <div class="row align-items-center">
+            <div class="col-lg-7 col-md-7">
+              <div class="inner-title">
+                <h3>我們的服務</h3>
+                <ul>
+                  <li>
+                    <a href="/index.html">Home</a>
+                  </li>
+                  <li>服務詳情</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Inner Banner Area -->
+
+      <!-- Order Time Area -->
+      <div class="order-time-container">
+        <div class="order-time-gallery">
+          <img
+            class="order-time-gallery-big-image"
+            src="./assets/images/gallery/gallery-img1.jpg"
+            alt=""
+          />
+          <div class="order-time-gallery-thumbList">
+            <img src="./assets/images/gallery/gallery-img2.jpg" alt="" />
+            <img src="./assets/images/gallery/gallery-img3.jpg" alt="" />
+            <img src="./assets/images/gallery/gallery-img4.jpg" alt="" />
+            <img src="./assets/images/gallery/gallery-img5.jpg" alt="" />
+          </div>
+        </div>
+        <div class="order-time-summary">
+          <div class="order-time-summary-title">命運之門-西洋塔羅占卜</div>
+          <div class="order-time-price-time">
+            <span>$900.00</span><span>30分</span>
+          </div>
+          <div class="order-time-summaryText">
+            <p>– 在城市裡・打造一座靜謐的心靈花園 –</p>
+            <p>
+              我們座落在仁愛安和路口，大片的落地窗撒下柔和光芒，窗外綠意盎然，滿是生機，願您能全然放鬆心靈，探索未來無限可能。
+            </p>
+            <p>
+              塔羅 / 盧恩 / 馬雅 / 蠟燭、奇易紫占 (奇門塔羅 /易經塔羅 /紫微塔羅)
+              等各式占卜服務品項均一價
+            </p>
+          </div>
+          <div class="order-time-form">
+            <span class="order-time-form-title">要問的時間長度 *</span>
+            <select name="timeSpan" id="timeSpan">
+              <option>選擇一個選項...</option>
+              <option>30分鐘</option>
+              <option>45分鐘</option>
+              <option>60分鐘</option>
+            </select>
+            <span class="order-time-form-title">預約哪位老師</span>
+            <select name="teacher" id="teacher">
+              <option>— 無偏好 —</option>
+              <option>陽光晴獅老師</option>
+              <option>承珅 Trison老師</option>
+              <option>波特老師</option>
+            </select>
+            <div class="date-selector">
+              <div class="month-year">
+                <span class="month-year-prev"></span>
+                <span class="month-year-text"></span>
+                <span class="month-year-next"></span>
+              </div>
+              <div class="date-selector-week">
+                <span>週日</span>
+                <span>週一</span>
+                <span>週二</span>
+                <span>週三</span>
+                <span>週四</span>
+                <span>週五</span>
+                <span>週六</span>
+              </div>
+              <div class="date-selector-date">
+                <div class="date-selector-dateItem">1</div>
+                <div class="date-selector-dateItem">2</div>
+                <div class="date-selector-dateItem">3</div>
+                <div class="date-selector-dateItem">4</div>
+                <div class="date-selector-dateItem">5</div>
+                <div class="date-selector-dateItem">6</div>
+                <div class="date-selector-dateItem">7</div>
+                <div class="date-selector-dateItem">8</div>
+                <div class="date-selector-dateItem">9</div>
+                <div class="date-selector-dateItem">10</div>
+                <div class="date-selector-dateItem">11</div>
+                <div class="date-selector-dateItem">12</div>
+                <div class="date-selector-dateItem">13</div>
+                <div class="date-selector-dateItem">14</div>
+                <div class="date-selector-dateItem">15</div>
+                <div class="date-selector-dateItem">16</div>
+                <div class="date-selector-dateItem">17</div>
+                <div class="date-selector-dateItem">18</div>
+                <div class="date-selector-dateItem">19</div>
+                <div class="date-selector-dateItem">20</div>
+                <div class="date-selector-dateItem">21</div>
+                <div class="date-selector-dateItem">22</div>
+                <div class="date-selector-dateItem">23</div>
+                <div class="date-selector-dateItem">24</div>
+                <div class="date-selector-dateItem">25</div>
+                <div class="date-selector-dateItem">26</div>
+                <div class="date-selector-dateItem">27</div>
+                <div class="date-selector-dateItem">28</div>
+                <div class="date-selector-dateItem">29</div>
+                <div class="date-selector-dateItem">30</div>
+                <div class="date-selector-dateItem">31</div>
+                <div class="date-selector-dateItem">1</div>
+                <div class="date-selector-dateItem">2</div>
+                <div class="date-selector-dateItem">3</div>
+                <div class="date-selector-dateItem">4</div>
+                <div class="date-selector-dateItem">5</div>
+                <div class="date-selector-dateItem">6</div>
+                <div class="date-selector-dateItem">7</div>
+                <div class="date-selector-dateItem">8</div>
+                <div class="date-selector-dateItem">9</div>
+                <div class="date-selector-dateItem">10</div>
+                <div class="date-selector-dateItem">11</div>
+              </div>
+            </div>
+            <div class="time-selector">
+              <div class="time-selectorItem time-selector-morning">
+                <span>早上</span>
+                <ul>
+                  <li>-</li>
+                </ul>
+              </div>
+              <div class="time-selectorItem time-selector-afternoon">
+                <span>下午</span>
+                <ul>
+                  <li>-</li>
+                </ul>
+              </div>
+              <div class="time-selectorItem time-selector-night">
+                <span>晚上</span>
+                <ul>
+                  <li>-</li>
+                </ul>
+              </div>
+            </div>
+            <p class="order-note">歡迎先描述目前問題與狀態</p>
+            <p class="order-note">
+              若您有任何感興趣的項目，也可先備註，將視您的需求，安排最合適的老師。
+            </p>
+            <textarea
+              name="note"
+              id="order-note"
+              cols="30"
+              rows="1"
+              placeholder="備注："
+            ></textarea>
+          </div>
+          <button class="order-submit">立即預約</button>
+          <div class="order-share">
+            <span>share:</span>
+            <a href=" " target="_blank">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+              <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank">
+              <i class="ri-twitter-fill"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Order Time Area End-->
+
+      <!-- Shop Details Tab Area -->
+      <div class="shop-details-tab-area section-bg pt-70 pb-70">
+        <div class="container">
+          <div class="tab shop-detls-tab">
+            <div class="row">
+              <div class="col-lg-12">
+                <ul class="tabs text-center active">
+                  <li class="current">描述</li>
+
+                  <li class="">附加信息</li>
+
+                  <li class="">評論 <span> (01) </span></li>
+                </ul>
+              </div>
+
+              <div class="col-lg-12 col-md-12">
+                <div class="tab_content current active">
+                  <div class="tabs_item current" style="">
+                    <div class="shop-detls-tab-content">
+                      <div class="shop-detls-into">
+                        <p>
+                          位於這個區域內的所有文字資料都是暫時性質，作用是用作測試以讓設計圖可以達到最佳的預覽效果。貴司可以自行決定在這個區域放上任何關於
+                          您們網站內容的真實資料。衷心謝謝貴司選用了 IT Duck
+                          Tech.。位於這個區域內的所有文字資料都是暫時性質，作用是用作測試以讓設計圖可以達到最佳的預覽效果。貴司可以自行決定在這個區域放上任何關於..
+                        </p>
+                        <p>
+                          Voluptatem accusantium doloremque laudantium, totam
+                          rem aperiam, eaque ipsa quae ab ilinventore veritatis
+                          et quasi architecto beatae vitae dicta sunt explicabo.
+                          Nemo enim ipsam tatem quia voluptas sit aspernatur aut
+                          odit aut
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tabs_item" style="display: none">
+                    <div class="shop-detls-tab-content">
+                      <div class="shop-detls-into">
+                        <ul class="additional-information">
+                          <li><span>Brand:</span> ThemeForest</li>
+                          <li><span>Color:</span> Brown</li>
+                          <li><span>Size:</span> Large, Medium</li>
+                          <li><span>Weight:</span> 27 kg</li>
+                          <li><span>Dimensions:</span> 16 x 22 x 123 cm</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tabs_item" style="display: none">
+                    <div class="shop-detls-tab-content">
+                      <div class="shop-detls-into">
+                        <div class="shop-review-form">
+                          <h3>Customer Reviews</h3>
+                          <div class="review-title">
+                            <div class="rating">
+                              <i class="ri-star-fill"></i>
+                              <i class="ri-star-fill"></i>
+                              <i class="ri-star-fill"></i>
+                              <i class="ri-star-fill"></i>
+                              <i class="ri-star-half-fill"></i>
+                            </div>
+                            <p>Based on 3 reviews</p>
+                            <a
+                              href="shop-details.html"
+                              class="default-btn btn-right"
+                              >Write a Review <span></span
+                            ></a>
+                          </div>
+
+                          <div class="review-comments">
+                            <div class="review-item">
+                              <div class="content">
+                                <img
+                                  src="assets/images/products/product-user.jpg"
+                                  alt="Images"
+                                />
+                                <div class="content-dtls">
+                                  <h4>Heather Joanne</h4>
+                                  <span>15 Dec, 2021 AT 06:30 PM</span>
+                                </div>
+                              </div>
+                              <div class="rating">
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star-half"></i>
+                              </div>
+                              <h3>Good</h3>
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut
+                                enim ad minim veniam, quis nostrud exercitation.
+                              </p>
+                              <a
+                                href="shop-details.html"
+                                class="review-report-link"
+                                >Report as Inappropriate</a
+                              >
+                            </div>
+
+                            <div class="review-item">
+                              <div class="content">
+                                <img
+                                  src="assets/images/products/product-user2.jpg"
+                                  alt="Images"
+                                />
+                                <div class="content-dtls">
+                                  <h4>Penelope Rachel</h4>
+                                  <span>15 Dec, 2021 AT 06:30 PM</span>
+                                </div>
+                              </div>
+                              <div class="rating">
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star-half"></i>
+                              </div>
+                              <h3>Good</h3>
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut
+                                enim ad minim veniam, quis nostrud exercitation.
+                              </p>
+
+                              <a
+                                href="shop-details.html"
+                                class="review-report-link"
+                                >Report as Inappropriate</a
+                              >
+                            </div>
+
+                            <div class="review-item">
+                              <div class="content">
+                                <img
+                                  src="assets/images/products/product-user3.jpg"
+                                  alt="Images"
+                                />
+                                <div class="content-dtls">
+                                  <h4>Leonard Richard</h4>
+                                  <span> 15 Dec, 2021 AT 06:30 PM</span>
+                                </div>
+                              </div>
+                              <div class="rating">
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star-half"></i>
+                              </div>
+                              <h3>Good</h3>
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut
+                                enim ad minim veniam, quis nostrud exercitation.
+                              </p>
+
+                              <a
+                                href="shop-details.html"
+                                class="review-report-link"
+                                >Report as Inappropriate</a
+                              >
+                            </div>
+                          </div>
+
+                          <div class="review-form">
+                            <div class="contact-wrap-form">
+                              <div class="contact-form">
+                                <h4>Write a Review</h4>
+                                <form id="contactForm" novalidate="true">
+                                  <div class="row">
+                                    <div class="col-lg-6 col-sm-6">
+                                      <div class="form-group">
+                                        <input
+                                          type="text"
+                                          name="name"
+                                          id="name"
+                                          class="form-control"
+                                          required=""
+                                          data-error="Please enter your name"
+                                          placeholder="Your Name"
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-sm-6">
+                                      <div class="form-group">
+                                        <input
+                                          type="email"
+                                          name="email"
+                                          id="email"
+                                          class="form-control"
+                                          required=""
+                                          data-error="Please enter your email"
+                                          placeholder="Your Email"
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-sm-12">
+                                      <div class="form-group">
+                                        <input
+                                          type="text"
+                                          name="website"
+                                          class="form-control"
+                                          required=""
+                                          data-error="Your website"
+                                          placeholder="Your Website"
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                      <div class="form-group">
+                                        <textarea
+                                          name="message"
+                                          class="form-control"
+                                          id="message"
+                                          cols="30"
+                                          rows="8"
+                                          required=""
+                                          data-error="Write your message"
+                                          placeholder="Your Message.."
+                                        ></textarea>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                      <button
+                                        type="submit"
+                                        class="default-btn"
+                                        style="
+                                          pointer-events: all;
+                                          cursor: pointer;
+                                        "
+                                      >
+                                        Post A Comment
+                                      </button>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Shop Details Tab Area -->
+
+      <!-- Shop Related Area -->
+      <div class="shop-related-area pb-70">
+        <div class="container">
+          <div class="section-title mb-45 text-center">
+            <h2>關聯產品</h2>
+          </div>
+          <div class="row item-wrapper">
+            <div class="col-lg-3 col-md-6 items">
+              <div class="products-card products-card-short-css">
+                <div class="product-img">
+                  <a href="shop-details.html">
+                    <img
+                      src="assets/images/products/product-img1.jpg"
+                      alt="Products"
+                    />
+                  </a>
+                  <ul class="products-action-two">
+                    <li>
+                      <a href="cart.html"
+                        ><i class="ri-shopping-cart-line"></i
+                      ></a>
+                    </li>
+
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="modal"
+                        data-bs-target="#productsQuickView"
+                        ><i class="ri-eye-line"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="content">
+                  <h3><a href="shop-details.html">Nail Polish Removers</a></h3>
+                  <span>21.00$</span>
+                  <div class="rating">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 items">
+              <div class="products-card products-card-short-css">
+                <div class="product-img">
+                  <a href="shop-details.html">
+                    <img
+                      src="assets/images/products/product-img10.jpg"
+                      alt="Products"
+                    />
+                  </a>
+                  <ul class="products-action-two">
+                    <li>
+                      <a href="cart.html"
+                        ><i class="ri-shopping-cart-line"></i
+                      ></a>
+                    </li>
+
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="modal"
+                        data-bs-target="#productsQuickView"
+                        ><i class="ri-eye-line"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="content">
+                  <h3>
+                    <a href="shop-details.html">Nail Care Tools Premium</a>
+                  </h3>
+                  <span>31.00$</span>
+                  <div class="rating">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 items">
+              <div class="products-card products-card-short-css">
+                <div class="product-img">
+                  <a href="shop-details.html">
+                    <img
+                      src="assets/images/products/product-img3.jpg"
+                      alt="Products"
+                    />
+                  </a>
+                  <ul class="products-action-two">
+                    <li>
+                      <a href="cart.html"
+                        ><i class="ri-shopping-cart-line"></i
+                      ></a>
+                    </li>
+
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="modal"
+                        data-bs-target="#productsQuickView"
+                        ><i class="ri-eye-line"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="content">
+                  <h3><a href="shop-details.html">Nail Nourishing Oil</a></h3>
+                  <span>28.00$</span>
+                  <div class="rating">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 items">
+              <div class="products-card products-card-short-css">
+                <div class="product-img">
+                  <a href="shop-details.html">
+                    <img
+                      src="assets/images/products/product-img10.jpg"
+                      alt="Products"
+                    />
+                  </a>
+                  <ul class="products-action-two">
+                    <li>
+                      <a href="cart.html"
+                        ><i class="ri-shopping-cart-line"></i
+                      ></a>
+                    </li>
+
+                    <li>
+                      <a
+                        href="#"
+                        data-bs-toggle="modal"
+                        data-bs-target="#productsQuickView"
+                        ><i class="ri-eye-line"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="content">
+                  <h3><a href="shop-details.html">Glitter Nail Polish</a></h3>
+                  <span>20.00$</span>
+                  <div class="rating">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-line"></i>
+                    <i class="ri-star-line"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 text-center">
+              <div class="pagination-area">
+                <a href="blog-1.html" class="prev page-numbers">
+                  <i class="flaticon-arrow-pointing-to-left"></i>
+                </a>
+
+                <span class="page-numbers current" aria-current="page">1</span>
+                <a href="blog-1.html" class="page-numbers">2</a>
+                <a href="blog-1.html" class="page-numbers">3</a>
+
+                <a href="blog-1.html" class="next page-numbers">
+                  <i class="flaticon-arrow-pointing-to-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Shop Related Area -->
+    </section>
+    <!-- QuickView Modal Area -->
+    <div
+      class="modal fade productsQuickView"
+      id="productsQuickView"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="btn-close-on"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true"><i class="flaticon-close"></i></span>
+          </button>
+          <div class="product-details-desc">
+            <div class="row align-items-center">
+              <div class="col-lg-6 col-md-12">
+                <div class="products-quickView-image">
+                  <img
+                    src="assets/images/products/product-details.png"
+                    alt="Product Details"
+                  />
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-12">
+                <div class="product-desc mb-30 pl-20">
+                  <h3>Nail Polish Removers</h3>
+                  <div class="price">
+                    <span class="old-price">$140.00 </span>
+                    <span class="new-price">- $110.00</span>
+                  </div>
+                  <div class="product-review">
+                    <div class="rating">
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                      <i class="ri-star-line"></i>
+                      <i class="ri-star-line"></i>
+                    </div>
+                    <div class="rating-count">255 Reviews</div>
+                  </div>
+                  <p>
+                    Voluptatem accusantium doloremque laudantium, totam rem
+                    aperiam, eaque ipsa quae ab illo inventore veritatis et
+                    quasi.
+                  </p>
+                  <ul class="product-category-list">
+                    <li>存貨: <span>In Stock</span></li>
+                    <li>分類: <span>Nail, Lover</span></li>
+                  </ul>
+                  <div class="input-counter-area">
+                    <h4>數量</h4>
+                    <div class="input-counter">
+                      <span class="minus-btn"
+                        ><i class="ri-subtract-line"></i
+                      ></span>
+                      <input type="text" value="1" />
+                      <span class="plus-btn"><i class="ri-add-fill"></i></span>
+                    </div>
+                  </div>
+
+                  <div class="product-add-btn">
+                    <button type="submit" class="default-btn border-radius-5">
+                      加入購物車
+                      <i class="flaticon-shopping-cart-empty-side-view"></i>
+                    </button>
+                  </div>
+                  <div class="product-share">
+                    <ul>
+                      <li>
+                        <span>Share:</span>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/" target="_blank">
+                          <i class="ri-twitter-fill"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.linkedin.com/" target="_blank">
+                          <i class="ri-linkedin-fill"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.facebook.com/" target="_blank">
+                          <i class="ri-facebook-fill"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://vimeo.com/" target="_blank">
+                          <i class="ri-vimeo-fill"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- QuickView Modal Area End -->
+    <!-- Footer Area -->
+    <div class="footer">
+      <div class="footer-info-container">
+        <div class="footer-info-item">
+          <div class="footer-info-itemTitle">關於 SIN</div>
+          <div class="footer-info-itemText">聯係我們</div>
+          <div class="footer-info-itemText">店鋪地址</div>
+          <div class="footer-info-itemText">常見問題</div>
+          <div class="footer-info-itemText">條款及細則</div>
+        </div>
+        <div class="footer-info-item">
+          <div class="footer-info-itemTitle">聯係我們</div>
+          <div class="footer-info-itemText">辦公時間：11-5pm</div>
+          <div class="footer-info-itemText">付款方式：信用卡</div>
+        </div>
+        <div class="footer-info-item">
+          <div class="footer-info-itemTitle">SIN-SPIRITS IN NEED</div>
+          <div class="footer-info-itemText">
+            地址：13F,Full View Building, 140-142 Des Voeux Road Central, Cetral
+          </div>
+          <div class="footer-info-itemText">查詢熱綫：61531269</div>
+          <div class="footer-info-itemText">WhatsApp：61531269</div>
+          <div class="footer-info-itemText">電郵：info@spiritsinneed.com</div>
+        </div>
+        <div class="footer-info-item">
+          <div class="footer-info-itemTitle">簡報</div>
+          <div class="footer-info-itemText">
+            訂閲SIN通訊，獲取最新消息及活動資料
+          </div>
+          <div class="inputEmailContainer">
+            <input
+              type="email"
+              placeholder="請輸入你的電郵地址"
+              class="inputEmail"
+            />
+            <div class="inputEmailBtn">訂閲</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        COPYRIGHT © SIN - SPIRITS IN NEED. |
+        <a href="">POWERED BY IT DUCK TECH.</a>
+      </div>
+      <div class="footer-shareIcon">
+        <a href=""><i class="iconfont icon-facebook"></i></a>
+        <a href=""><img src="./assets/images/youtube-icon.png" alt="" /></a>
+        <a href=""><i class="iconfont icon-instagram"></i></a>
+      </div>
+      <div class="footer-checkoutIcon">
+        <a href=""><img src="./assets/images/icon/visa.png" alt="" /></a>
+        <a href=""><img src="./assets/images/icon/payment2.png" alt="" /></a>
+        <a href=""><img src="./assets/images/icon/AMEX.png" alt="" /></a>
+        <a href=""><img src="./assets/images/icon/EIC.png" alt="" /></a>
+      </div>
+    </div>
+    
+    <!-- Footer Area End -->
+    <!-- Jquery Min JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="assets/js/plugins.js"></script>
+    <!-- Custom  JS -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/order.js"></script>
+    <script></script>
   </body>
-  <script src="./assets/js/vis.min.js"></script>
-  <script src="./assets/js/layui.js"></script>
-  <script src="./assets/js/vis-network.min.js"></script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
-  <script src="./assets/js/index.js"></script>
 </html>
