@@ -1,7 +1,7 @@
-const imageViewer = $('.order-time-gallery')
+const imageViewer = $(".order-time-gallery");
 imageViewer.viewer({
-    title:false,
-})
+  title: false,
+});
 
 const monthMap = [
   "一月",
@@ -137,6 +137,7 @@ const hanleNextMonthClick = () => {
 lastMonthElement.click(hanleLastMonthClick);
 nextMonthElement.click(hanleNextMonthClick);
 dateElement.click(function () {
+  if ($(this).hasClass("disabledDateStatus")) return;
   activeDate = dayjs($(this).attr("v-date"));
   updateDate();
 });
@@ -148,7 +149,7 @@ if (
 ) {
   $(".time-selector-morning ul").html(() => {
     let result = "";
-    availableTime.morning.forEach((time,index) => {
+    availableTime.morning.forEach((time, index) => {
       result += `<li v-time-span="morning" v-index="${index}">${time}</li>`;
     });
     return result;
@@ -161,7 +162,7 @@ if (
 ) {
   $(".time-selector-afternoon ul").html(() => {
     let result = "";
-    availableTime.afternoon.forEach((time,index) => {
+    availableTime.afternoon.forEach((time, index) => {
       result += `<li v-time-span="afternoon" v-index="${index}">${time}</li>`;
     });
     return result;
@@ -170,32 +171,29 @@ if (
 if (availableTime && availableTime.night && availableTime.night.length > 0) {
   $(".time-selector-night ul").html(() => {
     let result = "";
-    availableTime.night.forEach((time,index) => {
+    availableTime.night.forEach((time, index) => {
       result += `<li v-time-span="night" v-index="${index}">${time}</li>`;
     });
     return result;
   });
 }
 
-let activeTimeElement
-$('.time-selectorItem ul li').click(function(){
-    if(activeTimeElement){
-        activeTimeElement.removeClass('time-selectorItem__active')
-    }
-    activeTimeElement = $(this)
-    activeTimeElement.addClass('time-selectorItem__active')
+let activeTimeElement;
+$(".time-selectorItem ul li").click(function () {
+  if (activeTimeElement) {
+    activeTimeElement.removeClass("time-selectorItem__active");
+  }
+  activeTimeElement = $(this);
+  activeTimeElement.addClass("time-selectorItem__active");
+});
 
-})
-
-$('.order-submit').click(
-    function(){
-        const formData = {
-            serviceDuration:$('#timeSpan option:selected').text(),
-            teacher:$('#teacher option:selected').text(),
-            date:activeDate.format('YYYY-MM-DD'),
-            time:activeTimeElement?.text(),
-            note:$('#order-note').val()
-        }
-        console.log(formData)
-    }
-)
+$(".order-submit").click(function () {
+  const formData = {
+    serviceDuration: $("#timeSpan option:selected").text(),
+    teacher: $("#teacher option:selected").text(),
+    date: activeDate.format("YYYY-MM-DD"),
+    time: activeTimeElement?.text(),
+    note: $("#order-note").val(),
+  };
+  console.log(formData);
+});
