@@ -1,8 +1,3 @@
-const imageViewer = $(".order-time-gallery");
-imageViewer.viewer({
-  title: false,
-});
-
 const monthMap = [
   "一月",
   "二月",
@@ -196,4 +191,11 @@ $(".order-submit").click(function () {
     note: $("#order-note").val(),
   };
   console.log(formData);
+});
+
+
+// 图片查看器
+const imageViewer = $(".order-time-gallery");
+imageViewer.viewer({
+  title: false,
 });
