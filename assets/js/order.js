@@ -13,7 +13,7 @@ const monthMap = [
   "十二月",
 ];
 let currentDate = dayjs();
-let activeDate = currentDate;
+let activeDate = currentDate.add(1,'d');
 
 // API請求后更新
 let dateSelectorData = [
@@ -40,6 +40,30 @@ let dateSelectorData = [
   {
     date: "2023-07-06",
     status: "available",
+  },
+  {
+    date: "2023-07-07",
+    status: "half",
+  },
+  {
+    date: "2023-07-08",
+    status: "half",
+  },
+  {
+    date: "2023-07-09",
+    status: "half",
+  },
+  {
+    date: "2023-07-10",
+    status: "half",
+  },
+  {
+    date: "2023-07-11",
+    status: "half",
+  },
+  {
+    date: "2023-07-12",
+    status: "half",
   },
 ];
 // API請求后更新
@@ -198,4 +222,8 @@ $(".order-submit").click(function () {
 const imageViewer = $(".order-time-gallery");
 imageViewer.viewer({
   title: false,
+  toolbar:{
+    prev:true,
+    next:true,
+  }
 });
